@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SongExplore</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .navbar {
+      background-color: rgb(0, 0, 0);
+    }
+
+    .offcanvas-title {
+      color: blueviolet;
+    }
+
+    .btn {
+      background-color: blueviolet;
+      color: aliceblue;
+    }
+
+    .cadastro-link {
+      text-decoration: none;
+    }
+
+    .card {
+      background-color: black;
+    }
+
+    .card-body {
+      color: rgb(235, 227, 241);
+    }
+
+    h6 {
+      color: blueviolet;
+    }
+  </style>
+</head>
+
+<body style="background-color:rgb(0, 0, 0)">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <img src="img/logo.png" alt="logo" width="65" height="60">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Álbuns
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="vinil.html">Lps & Vinis</a></li>
+                <li><a class="dropdown-item" href="cd.html">Cds</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <i class="bi bi-person"></i>
+                Entre ou Cadastre-se
+              </a>
+              </buttom>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--texto do offcanvas-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header" style="background-color: black;">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          <i class="bi bi-person"></i> Entre ou Cadastre-se
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" style="background-color: black;">
+        <div class="text-center">
+          <form class="row g-3">
+            <div class="mb-3">
+              <input type="email" class="form-control text-white" id="formGroupExampleInput"
+                style="background-color: black;" placeholder="Digite seu email">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control text-white" id="formGroupExampleInput2"
+                style="background-color: black;" placeholder="Digite sua senha">
+            </div>
+            <div>
+              <button type="submit" class="btn">Entrar</button>
+            </div>
+            <a class="cadastro-link" href="#">Não tem uma conta? Cadastre-se</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section classs="capa">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-4">
+          <a class="capa" href="index.html#promocao">
+            <img src="img/capa.PNG" class="w-100" alt="capa">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lancamentos">
+    <div class="container mt-5 p-4">
+      <div classs="row">
+        <div class="col-12">
+          <h1 class="titulo text-white text-center">LANÇAMENTOS</h1>
+        </div>
+      </div>
+    </div>
+    <!--cards-->
+    <div class="container">
+      <div class="row md-3">
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/album.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/album2.PNG" class="d-block w-100" alt="detalhe do cd">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Billie Eilish</h3>
+                <p class="card-text">HIT ME HARD AND SOFT - CD</p>
+                <h6>R$ 79,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--card2-->
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselExample2" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/album3.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/album4.PNG" class="d-block w-100" alt="detalhe do cd">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>AESPA</h3>
+                <p class="card-text">Armageddon - CD</p>
+                <h6>R$ 218,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--card3-->
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselExample3" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/album5.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/album6.PNG" class="d-block w-100" alt="detalhe do cd">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>RM</h3>
+                <p class="card-text">Right Place, Wrong PErson - CD</p>
+                <h6>R$ 249,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--card4-->
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselExample4" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/album7.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/album8.PNG" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Vince Staples</h3>
+                <p class="card-text">Dark Times - Vinil</p>
+                <h6>R$ 139,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--FIM DAS COLUNAS-->
+      </div>
+    </div>
+  </section>
+
+  <!--DESTAQUES-->
+  <section class="destaques">
+    <div class="container mt-5 p-4">
+      <div classs="row">
+        <div class="col-12">
+          <h1 class="titulo text-white text-center">DESTAQUES DA SEMANA</h1>
+        </div>
+      </div>
+    </div>
+    <!--cards-->
+    <div class="container">
+      <div class="row md-3">
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselExample5" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/album9.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/album10.PNG" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample5"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample5"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Tyler, The Creator</h3>
+                <p class="card-text">IGOR - Vinil</p>
+                <h6>R$ 270,00</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--card2-->
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselExample6" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/album11.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/album12.PNG" class="d-block w-100" alt="deatlhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample6"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample6"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Taylor Swift</h3>
+                <p class="card-text">Folklore - Vinil</p>
+                <h6>R$ 265,00</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--card3-->
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselExample7" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/album13.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/album14.PNG" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample7"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample7"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>SZA</h3>
+                <p class="card-text">SOS - Vinil</p>
+                <h6>R$ 179,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--card4-->
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselExample8" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/album15.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/album16.PNG" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample8"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample8"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Kendrick Lammar</h3>
+                <p class="card-text">To Pimp A Butterfly - Vinil</p>
+                <h6>R$ 385,00</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--FIM DAS COLUNAS-->
+      </div>
+    </div>
+  </section>
+  <!--SECTION PROMOCOES-->
+  <section class="promocao mt-3 p-4" id="promocao">
+    <div class="container mt-5 p-4">
+      <div classs="row">
+        <div class="col-12">
+          <h1 class="titulo text-white text-center">PROMOÇÕES</h1>
+        </div>
+      </div>
+    </div>
+    <!--cards-->
+    <div class="container">
+      <div class="row md-2">
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselPromocao1" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img4/promocao1.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img4/promocao2.png" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromocao1"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPromocao1"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Legião Urbana</h3>
+                <p class="card-text">DOIS - Vinil</p>
+                <h6>R$ 139,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselPromocao2" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img4/promocao3.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img4/promocao4.png" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromocao2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPromocao2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Rihanna</h3>
+                <p class="card-text">ANTI - Vinil</p>
+                <h6>R$ 219,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselPromocao3" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img4/promocao5.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img4/promocao6.png" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromocao3"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPromocao3"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Dominic Fike</h3>
+                <p class="card-text">Don't Forget About Me, Demos - Vinil</p>
+                <h6>R$ 150,00</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselPromocao4" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img4/promocao7.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img4/promocao8.png" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromocao4"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPromocao4"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Lil Peep</h3>
+                <p class="card-text">Come Over When You're Sober, PT.1 - Vinil</p>
+                <h6>R$ 179,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselPromocao5" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img4/promocao9.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img4/promocao10.png" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromocao5"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPromocao5"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Madvillain, Madlib, MF DOOM</h3>
+                <p class="card-text">Madvillainy - Vinil</p>
+                <h6>R$ 259,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col mt-3">
+          <div class="card">
+            <div id="carouselPromocao6" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img4/promocao11.png" class="d-block w-100" alt="capa do album">
+                </div>
+                <div class="carousel-item">
+                  <img src="img4/promocao12.png" class="d-block w-100" alt="detalhe do vinil">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromocao6"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPromocao6"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <h5>Lana Del Rey</h3>
+                <p class="card-text">Ultraviolence - Vinil</p>
+                <h6>R$ 179,90</h6>
+                <div class="position-absolute" style="right: 8%;">
+                  <a class="nav-link active" href="#" button type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    Comprar
+                    <i class="bi bi-cart3"></i>
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--fOOOOTER-->
+  <footer class="rodape mt-5 mb-3" style="background-color:rgb(5, 5, 5)">
+    <div class="container">
+      <div class="row p-5">
+        <div class="col-md-4 mt-3">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo2.png" alt="" width="150" height="140">
+          </a>
+        </div>
+        <div class="col-md-4 mt-3">
+          <h3 class="fs-6 ms-3" style="color:rgb(205, 108, 250)">REDES SOCIAIS</h3>
+          <ul class="nav ">
+            <li class="nav-item">
+              <a class="nav-link fs-5" aria-current="page" href="#" style="color:rgb(235, 227, 241)">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fs-5" aria-current="page" href="#" style="color:rgb(235, 227, 241)">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fs-5" aria-current="page" href="#" style="color:rgb(235, 227, 241)">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fs-5" aria-current="page" href="#" style="color:rgb(235, 227, 241)">
+                <i class="bi bi-tiktok"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mt-3">
+          <h3 class="fs-6 ms-3" style="color:rgb(205, 108, 250)">MAPA DO SITE</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link fw-lighter text-white" aria-current="page" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-lighter text-white" aria-current="page" href="vinil.html">LPS & Vinis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-lighter text-white" aria-current="page" href="cd.html">CDs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row mb-4 align-items-center">
+        <div class="col-12 col-md text-center">
+          <img src="img/item.png" alt="cartão visa" width="40" height="25">
+          <img src="img/item2.png" alt="cartão mastercard" width="40" height="25">
+          <img src="img/item3.png" alt="cartão american express" width="40" height="25">
+          <img src="img/item4.png" alt="Diners Club International" width="40" height="25">
+          <img src="img/item5.png" alt="cartão aura" width="40" height="25">
+          <img src="img/item6.png" alt="cartão elo" width="40" height="25">
+          <img src="img/item7.png" alt="hipercard" width="40" height="25">
+          <img src="img/item8.png" alt="pix" width="40" height="25">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
